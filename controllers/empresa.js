@@ -20,7 +20,7 @@ const getEmpresas = async (req = request, res = response) => {
 
 const postEmpresa = async (req = request, res = response) => {
   const { nombre, correo, password, tipo, sucursales } = req.body;
-  const empresaGuardadaDB = new Empresa({ nombre, correo, password, tipo, sucursales });
+  const empresaGuardadaDB = new Empresa({ nombre, correo, password, type, });
 
   empresaGuardadaDB.sucursales.push(...req.body.sucursales);
 
