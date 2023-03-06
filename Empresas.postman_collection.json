@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "5b26a645-cbf6-406a-9060-45050578bf48",
+		"name": "Empresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST agregar empresa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Avon\",\r\n    \"correo\": \"Avon@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"tipo\": \"Cuidado Femenino\" ,\r\n    \"sucursales\": [\r\n        \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empresas/agregarEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"agregarEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"Avon@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST aregar sucursal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NjIxZTc1ODRiMmZhMjQ1Y2NhN2EiLCJpYXQiOjE2NzgwNzg4MjYsImV4cCI6MTY3ODA5NjgyNn0.YQVQa413aPcPRWwHd4TPTkDV-5IOFVABC1f17GPkFZE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Siman Miraflores\",\r\n    \"municipio\": \"Ciudad de Guatemala\",\r\n    \"direccion\": \" 21 Avenida 4-32 Zona 11 Centro Comercial Miraflores Guatemala, Cdad. de Guatemala\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sucursales/agregarSucursal",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"agregarSucursal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT editar empresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NjIxZTc1ODRiMmZhMjQ1Y2NhN2EiLCJpYXQiOjE2NzgwNzkyOTUsImV4cCI6MTY3ODA5NzI5NX0.pLhV9VqClGAhs5B3zN9ZfmHdkNfKvb4gY-3GzPEX5rQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sucursales\": [\r\n        \"6405621e7584b2fa245cca7a\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empresas/editarEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"editarEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET empresas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/empresas/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE eliminar empresa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NjIxZTc1ODRiMmZhMjQ1Y2NhN2EiLCJpYXQiOjE2NzgwNzkyOTUsImV4cCI6MTY3ODA5NzI5NX0.pLhV9VqClGAhs5B3zN9ZfmHdkNfKvb4gY-3GzPEX5rQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/empresas/eliminarEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresas",
+						"eliminarEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE eliminar sucursal",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NjIxZTc1ODRiMmZhMjQ1Y2NhN2EiLCJpYXQiOjE2NzgwNzkyOTUsImV4cCI6MTY3ODA5NzI5NX0.pLhV9VqClGAhs5B3zN9ZfmHdkNfKvb4gY-3GzPEX5rQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/sucursales/eliminarSucursal/6405746b7584b2fa245cca81",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"eliminarSucursal",
+						"6405746b7584b2fa245cca81"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET sucursales por empresa",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzZmVmYmFiNTE0MjVkODUzMzczYzEiLCJpYXQiOjE2Nzc5ODM1MTgsImV4cCI6MTY3ODAwMTUxOH0.0OjpMGn6zpu2cKhIJzN8vmwrCdw21F6eDyZKu_sN17k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/sucursales/mostrarSucursalEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"mostrarSucursalEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET buscador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/buscar/empresas/Avon?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzZmVmYmFiNTE0MjVkODUzMzczYzEiLCJpYXQiOjE2Nzc5ODM1MTgsImV4cCI6MTY3ODAwMTUxOH0.0OjpMGn6zpu2cKhIJzN8vmwrCdw21F6eDyZKu_sN17k",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buscar",
+						"empresas",
+						"Avon"
+					],
+					"query": [
+						{
+							"key": "x-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzZmVmYmFiNTE0MjVkODUzMzczYzEiLCJpYXQiOjE2Nzc5ODM1MTgsImV4cCI6MTY3ODAwMTUxOH0.0OjpMGn6zpu2cKhIJzN8vmwrCdw21F6eDyZKu_sN17k"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT editar sucursal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NjIxZTc1ODRiMmZhMjQ1Y2NhN2EiLCJpYXQiOjE2NzgwNzk2NzYsImV4cCI6MTY3ODA5NzY3Nn0.MXzyhcUSvxsKfrmNPxvlVbdRs45Xj8w2FV9r7apaM-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"sucursal centrac\",\r\n    \"municipio\": \"Ciudad de Guatemala zona 9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sucursales/editar/6405746b7584b2fa245cca81",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursales",
+						"editar",
+						"6405746b7584b2fa245cca81"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
