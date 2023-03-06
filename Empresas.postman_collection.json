@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\": \"Avon\",\r\n    \"correo\": \"Avon@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"tipo\": \"Cuidado Femenino\" ,\r\n    \"sucursales\": [\r\n        \r\n    ]\r\n}",
+					"raw": "{\r\n    \"nombre\": \"Avon\",\r\n    \"correo\": \"Avon@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"type\": \"Cuidado Femenino\" ,\r\n    \"sucursales\": [\r\n        \r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
